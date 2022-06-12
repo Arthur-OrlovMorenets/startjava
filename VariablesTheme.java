@@ -130,11 +130,11 @@ public class VariablesTheme {
         char rbracket = ')';
         
         System.out.println("8. Вывод на консоль ASCII-арт Дюка");
-        System.out.println(space + "" + space + "" + space + "" + space + ""+ slash + "" + backslash + "" + space + "" + space + "" + space + "" + space + "" + space);
-        System.out.println(space + "" + space + "" + space + "" + slash + ""+ space + "" + space + "" + backslash + "" + space + "" + space + "" + space + "" + space);
-        System.out.println(space + "" + space + "" + slash + "" + underscore + ""+ lbracket + "" + space + "" + rbracket + "" + backslash + "" + space + "" + space + "" + space);
+        System.out.println(space + "" + space + "" + space + "" + space + "" + slash + "" + backslash + "" + space + "" + space + "" + space + "" + space + "" + space);
+        System.out.println(space + "" + space + "" + space + "" + slash + "" + space + "" + space + "" + backslash + "" + space + "" + space + "" + space + "" + space);
+        System.out.println(space + "" + space + "" + slash + "" + underscore + "" + lbracket + "" + space + "" + rbracket + "" + backslash + "" + space + "" + space + "" + space);
         System.out.println(space + "" + slash + "" + space + "" + space + ""+ space + "" + space + "" + space + "" + space + "" + backslash + "" + space + "" + space);
-        System.out.println(slash + "" + underscore + "" + underscore + "" + underscore + ""+ underscore + "" + slash + "" + backslash + "" + underscore + "" + underscore + "" + backslash + "" + space);
+        System.out.println(slash + "" + underscore + "" + underscore + "" + underscore + "" + underscore + "" + slash + "" + backslash + "" + underscore + "" + underscore + "" + backslash + "" + space);
 
             //Задача №9
         int primeNumber = 123;
