@@ -1,6 +1,8 @@
 public class VariablesTheme {
     public static void main(String[] args) {
-            //Задача №1
+        //Задача №1
+        System.out.println("1. Создание переменных и вывод их значений на консоль." + "\n");
+        
         byte screen = 2;
         short core = 4;
         int ddr = 16000;
@@ -9,52 +11,51 @@ public class VariablesTheme {
         double freqt = 2.8;
         char c = 'Z';
         boolean boo = true;
-
-        System.out.println("1. Создание переменных и вывод их значений на консоль." + "\n");
+        
         System.out.println("Корпус: Zalman " + c + "3Plus");
         System.out.println("Количество мониторов: " + screen);
         System.out.println("Количество ядер: " + core + "\n" + "Частота ядра Normal: " + freqn + "\n" + "Частота ядра TurboBoost: " + freqt);
         System.out.println("Количество оперативной памяти в Мб: " + ddr + "\n" + "Примерное количество минут с момента сборки ПК: " + time + " минут");
-        System.out.println("\"правда\" на английском это: " + "\"" + boo + "\"" + "\n");
+        System.out.println("\"правда\" на английском это: " + "\"" + boo + "\"");
 
-            /*Задача №2 
-            */
-        int x = 100;
-        int y = 200;
+        //Задача №2
+        System.out.println("\n" + "2. Расчет стоимости товара со скидкой" + "\n");
+        int potatoPrice = 100;
+        int colaPrice = 200;
         int discount = 11;
-        double price;
+        double discountSize = (potatoPrice + colaPrice) * discount / 100;
+        double discountPrice = (potatoPrice + colaPrice) - discountSize;
+        
+        System.out.println("На картошку и колу действует скидка " + discount + "%" + "(" + discountSize + " рублей)");
+        System.out.println("Общая стоимость картошки с колой со скидкой составит: " + discountPrice + " рублей!");
 
-        price = (x + y) - (x + y) * discount / 100;
-
-        System.out.println("2. Расчет стоимости товара со скидкой" + "\n");
-        System.out.println("На товары X и Y действует скидка " + discount + "%" + "!");
-        System.out.println("Общая стоимость товаров X и Y со скидкой составит: " + price + " рублей!" + "\n");
-
-            //Задача №3 (Внимательный-копирует, невнивательный-высчитывает. =^.^= )
-        System.out.println("3. Вывод на консоль слова JAVA" + "\n");
+        //Задача №3 (Внимательный-копирует, невнивательный-высчитывает. =^.^= )
+        System.out.println("\n" + "3. Вывод на консоль слова JAVA" + "\n");
         System.out.println("   J    a  v     v  a    ");
         System.out.println("   J   a a  v   v  a a   ");
         System.out.println("J  J  aaaaa  V V  aaaaa  ");
-        System.out.println(" JJ  a     a  V  a     a" + "\n");
+        System.out.println(" JJ  a     a  V  a     a");
 
-            //Задача №4 (Представлять в консоли по ТЗ их не требовалось, поэтому как есть)
+        //Задача №4 (Представлять в консоли по ТЗ их не требовалось, поэтому как есть)
+        System.out.println("\n" + "4. Отображение min и max значений числовых типов данных" + "\n");
+        
         byte b = 127;
         short s = 32767;
         int i = 2_147_483_647;
         long l = 9_223_372_036_854_775_807l;
+        
+        System.out.println(b + "\n" + ++b + "\n" + --b + "\n");
+        System.out.println(s + "\n" + ++s + "\n" + --s + "\n");
+        System.out.println(i + "\n" + ++i + "\n" + --i + "\n");
+        System.out.println(l + "\n" + ++l + "\n" + --l);
 
-        System.out.println("4. Отображение min и max значений числовых типов данных" + "\n");
-        System.out.println(b + "\n" + b++ + "\n" + b-- + "\n");
-        System.out.println(s + "\n" + s++ + "\n" + s-- + "\n");
-        System.out.println(i + "\n" + i++ + "\n" + i-- + "\n");
-        System.out.println(l + "\n" + l++ + "\n" + l-- + "\n");
-
-            //Задача №5
+        //Задача №5
+        System.out.println("\n" + "5. Перестановка значений переменных" + "\n");
+        
         double d1 = 1.1;
         double d2 = 2.2;
         double d3;
 
-        System.out.println("5. Перестановка значений переменных" + "\n");
         System.out.println("Перестановка значений с помощью третьей переменной:");
         System.out.println("Исходное значение первой переменной d1: " + d1 + ", " + "второй перменной d2: " + d2);
         
@@ -66,62 +67,57 @@ public class VariablesTheme {
         System.out.println("Перестановка значений с помощью арифметических операций(сложение и вычитание):");
         System.out.println("Текущее значение первой переменной d1: " + d1 + ", " + "второй перменной d2: " + d2);
         
-        d1 = d1 + d2;
+        d1 += d2;
         d2 = d1 - d2;
-        d1 = d1 - d2;
+        d1 -= d2;
         
         System.out.println("Новое значение первой переменной d1: " + d1 + ", " + "второй переменной d2: " + d2 + "\n");
         System.out.println("Перестановка значений с помощью побитовой операции:");
         System.out.println("Текущее значение первой переменной d1: " + d1 + ", " + "второй перменной d2: " + d2);
         
         //превращаем дробные числа в целые
-        d1 = d1 * 1000;
-        d2 = d2 * 1000;
+        d1 *= 1000;
+        d2 *= 1000;
 
-        int d11 = (int)d1;
-        int d22 = (int)d2;
+        int d11 = (int) d1;
+        int d22 = (int) d2;
 
-        d11 = d11 ^ d22;
+        d11 ^= d22;
         d22 = d11 ^ d22;
-        d11 = d11 ^ d22;
+        d11 ^= d22;
         //превращаем целые числа обратно в дробные
-        d1 = (double)d11 / 1000;
-        d2 = (double)d22 / 1000;
-        System.out.println("Новое значение первой переменной d1: " + d1 + ", " + "второй переменной d2: " + d2 + "\n");
+        d1 = (double) d11 / 1000;
+        d2 = (double) d22 / 1000;
+        System.out.println("Новое значение первой переменной d1: " + d1 + ", " + "второй переменной d2: " + d2);
         
-            //Задача №6
-        int chr1 = 35;
-        char chrSym1 = (char)chr1;
-        int chr2 = 38;
-        char chrSym2 = (char)chr2;
-        int chr3 = 64;
-        char chrSym3 = (char)chr3;
-        int chr4 = 94;
-        char chrSym4 = (char)chr4;
-        int chr5 = 95;
-        char chrSym5 = (char)chr5;
+        //Задача №6
+        System.out.println("\n" + "6. Вывод символов и их кодов");
+        int codeChar1 = 35;
+        int codeChar2 = 38;
+        int codeChar3 = 64;
+        int codeChar4 = 94;
+        int codeChar5 = 95;
 
-        System.out.println("6. Вывод символов и их кодов");
-        System.out.println(chr1 + " " + chrSym1);
-        System.out.println(chr2 + " " + chrSym2);
-        System.out.println(chr3 + " " + chrSym3);
-        System.out.println(chr4 + " " + chrSym4);
-        System.out.println(chr5 + " " + chrSym5 + "\n");
+        System.out.println(codeChar1 + " " + (char) codeChar1);
+        System.out.println(codeChar2 + " " + (char) codeChar2);
+        System.out.println(codeChar3 + " " + (char) codeChar3);
+        System.out.println(codeChar4 + " " + (char) codeChar4);
+        System.out.println(codeChar5 + " " + (char) codeChar5);
 
-            //Задача №7
+        //Задача №7
+        System.out.println("\n" + "7. Произведение и сумма цифр числа");
+        
         int number = 345;
-        int firstNumber;
-        int secondNumber;
-        int thirdNumber;
+        int firstNumber = number / 100;
+        int secondNumber = (number % 100) / 10;
+        int thirdNumber = (number % 100) % 10;
 
-        firstNumber = number / 100;
-        secondNumber = (number - firstNumber * 100) / 10;
-        thirdNumber = number - firstNumber * 100 - secondNumber * 10;
-        System.out.println("7. Произведение и сумма цифр числа");
         System.out.println(firstNumber * secondNumber * thirdNumber);
-        System.out.println(firstNumber + secondNumber + thirdNumber + "\n");
+        System.out.println(firstNumber + secondNumber + thirdNumber);
 
-            //Задача №8
+        //Задача №8
+        System.out.println("\n" + "8. Вывод на консоль ASCII-арт Дюка");
+        
         char space = ' ';
         char slash = '/';
         char backslash = '\\';
@@ -129,36 +125,31 @@ public class VariablesTheme {
         char lbracket = '(';
         char rbracket = ')';
         
-        System.out.println("8. Вывод на консоль ASCII-арт Дюка");
-        System.out.println(space + "" + space + "" + space + "" + space + "" + slash + "" + backslash + "" + space + "" + space + "" + space + "" + space + "" + space);
-        System.out.println(space + "" + space + "" + space + "" + slash + "" + space + "" + space + "" + backslash + "" + space + "" + space + "" + space + "" + space);
-        System.out.println(space + "" + space + "" + slash + "" + underscore + "" + lbracket + "" + space + "" + rbracket + "" + backslash + "" + space + "" + space + "" + space);
-        System.out.println(space + "" + slash + "" + space + "" + space + "" + space + "" + space + "" + space + "" + space + "" + backslash + "" + space + "" + space);
-        System.out.println(slash + "" + underscore + "" + underscore + "" + underscore + "" + underscore + "" + slash + "" + backslash + "" + underscore + "" + underscore + "" + backslash + "" + space);
+        System.out.println("" +space + space + space + space + slash + backslash + space + space + space + space + space);
+        System.out.println(""+ space + space + space + slash + space + space + backslash + space + space + space + space);
+        System.out.println(""+ space + space + slash + underscore + lbracket + space + rbracket + backslash + space + space + space);
+        System.out.println("" + space + slash + space + space + space + space + space + space + backslash + space + space);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash + space);
 
-            //Задача №9
-        int primeNumber = 123;
-        int hundreds;
-        int dozens;
-        int units;
+        //Задача №9
+        System.out.println("\n" + "9. Отображение количества сотен, десятков и единиц числа");
+        
+        int srcNum = 123;
+        int hundreds = srcNum / 100;
+        int dozens = (srcNum % 100 ) / 10;
+        int units = (srcNum % 100 ) % 10;
 
-        hundreds = primeNumber / 100;
-        dozens = (primeNumber - hundreds * 100) / 10;
-        units = primeNumber % (dozens * 10);
+        System.out.println("Число " + srcNum + " содержит:");
+        System.out.println(hundreds + " сотен" + "\n" + dozens + " десятков" + "\n" + units + " единиц");
 
-        System.out.println("9. Отображение количества сотен, десятков и единиц числа");
-        System.out.println("Число " + primeNumber + " содержит:" + "\n" + hundreds + " сотен" + "\n" + dozens + " десятков" + "\n" + units + " единиц" + "\n");
-
-            //Задача №10
-        int primeSec = 86_399;
-        int hours;
-        int minutes;
-        int seconds;
-
-        System.out.println("10. Преобразование секунд");
-        hours = primeSec / 3600;
-        minutes = (primeSec - 3600 * hours) / 60;
-        seconds = primeSec % (hours * 3600 + minutes * 60);
+        //Задача №10
+        System.out.println("\n" + "10. Преобразование секунд");
+        
+        int srcSec = 86_399;
+        int hours = srcSec / 3600;
+        int minutes = (srcSec % 3600) / 60;
+        int seconds = (srcSec % 3600) % 60;
+        
         System.out.println(hours + ":" + minutes + ":" + seconds);
     }
 }
