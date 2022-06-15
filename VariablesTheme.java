@@ -1,8 +1,7 @@
 public class VariablesTheme {
     public static void main(String[] args) {
-        //Задача №1
-        System.out.println("1. Создание переменных и вывод их значений на консоль." + "\n");
         
+        System.out.println("1. Создание переменных и вывод их значений на консоль." + "\n");
         byte screen = 2;
         short core = 4;
         int ddr = 16000;
@@ -14,12 +13,13 @@ public class VariablesTheme {
         
         System.out.println("Корпус: Zalman " + c + "3Plus");
         System.out.println("Количество мониторов: " + screen);
-        System.out.println("Количество ядер: " + core + "\n" + "Частота ядра Normal: " + freqn + "\n" + "Частота ядра TurboBoost: " + freqt);
-        System.out.println("Количество оперативной памяти в Мб: " + ddr + "\n" + "Примерное количество минут с момента сборки ПК: " + time + " минут");
+        System.out.println("Количество ядер: " + core + "\n" + "Частота ядра Normal: " + freqn);
+        System.out.println("Частота ядра TurboBoost: " + freqt);
+        System.out.println("Количество оперативной памяти в Мб: " + ddr);
+        System.out.println("Примерное количество минут с момента сборки ПК: " + time + " минут");
         System.out.println("\"правда\" на английском это: " + "\"" + boo + "\"");
 
-        //Задача №2
-        System.out.println("\n" + "2. Расчет стоимости товара со скидкой" + "\n");
+        System.out.println("\n2. Расчет стоимости товара со скидкой\n");
         int potatoPrice = 100;
         int colaPrice = 200;
         int discount = 11;
@@ -29,16 +29,13 @@ public class VariablesTheme {
         System.out.println("На картошку и колу действует скидка " + discount + "%" + "(" + discountSize + " рублей)");
         System.out.println("Общая стоимость картошки с колой со скидкой составит: " + discountPrice + " рублей!");
 
-        //Задача №3 (Внимательный-копирует, невнивательный-высчитывает. =^.^= )
-        System.out.println("\n" + "3. Вывод на консоль слова JAVA" + "\n");
+        System.out.println("\n3. Вывод на консоль слова JAVA\n");
         System.out.println("   J    a  v     v  a    ");
         System.out.println("   J   a a  v   v  a a   ");
         System.out.println("J  J  aaaaa  V V  aaaaa  ");
         System.out.println(" JJ  a     a  V  a     a");
 
-        //Задача №4 (Представлять в консоли по ТЗ их не требовалось, поэтому как есть)
-        System.out.println("\n" + "4. Отображение min и max значений числовых типов данных" + "\n");
-        
+        System.out.println("\n4. Отображение min и max значений числовых типов данных\n");        
         byte b = 127;
         short s = 32767;
         int i = 2_147_483_647;
@@ -49,9 +46,7 @@ public class VariablesTheme {
         System.out.println(i + "\n" + ++i + "\n" + --i + "\n");
         System.out.println(l + "\n" + ++l + "\n" + --l);
 
-        //Задача №5
-        System.out.println("\n" + "5. Перестановка значений переменных" + "\n");
-        
+        System.out.println("\n5. Перестановка значений переменных\n");        
         double d1 = 1.1;
         double d2 = 2.2;
         double d3;
@@ -90,8 +85,7 @@ public class VariablesTheme {
         d2 = (double) d22 / 1000;
         System.out.println("Новое значение первой переменной d1: " + d1 + ", " + "второй переменной d2: " + d2);
         
-        //Задача №6
-        System.out.println("\n" + "6. Вывод символов и их кодов");
+        System.out.println("\n6. Вывод символов и их кодов\n");
         int codeChar1 = 35;
         int codeChar2 = 38;
         int codeChar3 = 64;
@@ -104,9 +98,7 @@ public class VariablesTheme {
         System.out.println(codeChar4 + " " + (char) codeChar4);
         System.out.println(codeChar5 + " " + (char) codeChar5);
 
-        //Задача №7
-        System.out.println("\n" + "7. Произведение и сумма цифр числа");
-        
+        System.out.println("\n7. Произведение и сумма цифр числа\n");
         int number = 345;
         int firstNumber = number / 100;
         int secondNumber = (number % 100) / 10;
@@ -115,9 +107,7 @@ public class VariablesTheme {
         System.out.println(firstNumber * secondNumber * thirdNumber);
         System.out.println(firstNumber + secondNumber + thirdNumber);
 
-        //Задача №8
-        System.out.println("\n" + "8. Вывод на консоль ASCII-арт Дюка");
-        
+        System.out.println("\n8. Вывод на консоль ASCII-арт Дюка\n");
         char space = ' ';
         char slash = '/';
         char backslash = '\\';
@@ -131,9 +121,7 @@ public class VariablesTheme {
         System.out.println("" + space + slash + space + space + space + space + space + space + backslash + space + space);
         System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash + space);
 
-        //Задача №9
-        System.out.println("\n" + "9. Отображение количества сотен, десятков и единиц числа");
-        
+        System.out.println("\n9. Отображение количества сотен, десятков и единиц числа\n");
         int srcNum = 123;
         int hundreds = srcNum / 100;
         int dozens = (srcNum % 100 ) / 10;
@@ -142,9 +130,7 @@ public class VariablesTheme {
         System.out.println("Число " + srcNum + " содержит:");
         System.out.println(hundreds + " сотен" + "\n" + dozens + " десятков" + "\n" + units + " единиц");
 
-        //Задача №10
-        System.out.println("\n" + "10. Преобразование секунд");
-        
+        System.out.println("\n10. Преобразование секунд\n");
         int srcSec = 86_399;
         int hours = srcSec / 3600;
         int minutes = (srcSec % 3600) / 60;
