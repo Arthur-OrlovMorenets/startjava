@@ -209,6 +209,5 @@ public class IfElseStatementTheme {
         System.out.print(requiredHundreds + " сотен" + ", " + requiredDozens + " десяток" + ", ");
         System.out.print(requiredUnits + " купюр по доллару\nUSD к выдаче: ");
         System.out.println((requiredHundreds * hundreds) + (requiredDozens * dozens) + (requiredUnits));
-
     }
 }
