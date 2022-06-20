@@ -137,7 +137,7 @@ public class IfElseStatementTheme {
         } else if ( depositSum >= 100_000 && depositSum < 300_000) {
             System.out.print("Начисленный процент: " + depositRateLess300k + "% годовых");
             percentage = depositSum * depositRateLess300k / 100;
-            System.out.println(" (" + percentage +" руб.)");
+            System.out.println(" (" + percentage + " руб.)");
             System.out.println("Итоговая сумма с процентами составляет: " + (depositSum + percentage) + "руб.");
         } else if ( depositSum >= 300_000) {
             System.out.print("Начисленный процент: " + depositRateMore300k + "% годовых");
@@ -208,7 +208,7 @@ public class IfElseStatementTheme {
         int requiredUnits = requiredSum -(requiredHundreds * hundreds) - (requiredDozens * dozens);
         System.out.print(requiredHundreds + " сотен" + ", " + requiredDozens + " десяток" + ", ");
         System.out.print(requiredUnits + " купюр по доллару\nUSD к выдаче: ");
-        System.out.println((requiredHundreds * hundreds) + (requiredDozens*dozens) + (requiredUnits));
+        System.out.println((requiredHundreds * hundreds) + (requiredDozens * dozens) + (requiredUnits));
 
     }
 }
