@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("1. Перевод псевдокода на язык Java\n");
@@ -21,7 +23,7 @@ public class IfElseStatementTheme {
         if (height < 1.80) {
             System.out.println("Рост: ниже 180 см");
         } else {
-        System.out.println("Рост: выше 180 см");
+            System.out.println("Рост: выше 180 см");
         }
 
         firstLetterOfName = name.charAt(0);
@@ -35,38 +37,31 @@ public class IfElseStatementTheme {
         
         System.out.println("\n2. Поиск max и min числа\n");
 
-        int firstVal = 5;
-        int secondVal = 7;
+        int num1 = 5;
+        int num2 = 7;
 
-        if (firstVal > secondVal) {
-            System.out.println("Максимальное число: " + firstVal + "\nМинимальное число: " + secondVal);
+        if (num1 > num2) {
+            System.out.println("Максимальное число: " + num1 + "\nМинимальное число: " + num2);
         } else {
-            System.out.println("Максимальное число: " + secondVal + "\nМинимальное число: " + firstVal);
+            System.out.println("Максимальное число: " + num2 + "\nМинимальное число: " + num1);
         }
         
         System.out.println("\n3. Работа с числом\n");
 
-        int srcNum = -18;
+        int srcNum = 2;
 
-        System.out.print("Число: " + srcNum);
+        System.out.print("Число: " + srcNum + " является");
         if (srcNum == 0) {
-            System.out.print(" является нулём");
-        } else {
-            if (srcNum % 2 != 0) {
-                System.out.print(" является нечетным");
-            if (srcNum > 0) {
-                System.out.print(" положительным");
-            } else {
-                System.out.print(" отрицательным");
-            }
-            } else if (srcNum % 2 == 0) {
-                System.out.print(" является четным");
-            if (srcNum > 0) {
-                System.out.print(" положительным");
-            } else {
-                System.out.print(" отрицательным");
-                }
-            }
+            System.out.print(" нулём");
+        } else if (srcNum % 2 != 0) {
+            System.out.print(" нечетным");
+        } else if (srcNum % 2 == 0) {
+            System.out.print(" четным");
+        }
+        if (srcNum > 0) {
+            System.out.print(" положительным");
+        } else if (srcNum < 0) {
+            System.out.print(" отрицательным");
         }
 
         System.out.println("\n\n4. Поиск одинаковых цифр в числах\n");
@@ -80,30 +75,15 @@ public class IfElseStatementTheme {
         int secondNum2 = (secondNumber % 100) / 10;
         int thirdNum2 = (secondNumber % 100) % 10;
 
-        System.out.print("В числах " + firstNumber + " и " + secondNumber + " одинаковые цифры");
+        System.out.print("В числах " + firstNumber + " и " + secondNumber + " одинаковые цифры: ");
         if (firstNum1 == firstNum2) {
-            System.out.print(" " + firstNum1);
-            if (secondNum1 == secondNum2) {
-                System.out.print(", " + secondNum1);
-                    if (thirdNum1 == thirdNum2) {
-                    System.out.print(", " + thirdNum1);
-                }
-            }
-        } else if (secondNum1 == secondNum2) {
-            System.out.print(" " + secondNum1);
-            if (thirdNum1 == thirdNum2) {
-                System.out.print(" и " + thirdNum1);
-            }
-        } else if (thirdNum1 == thirdNum2) {
-            System.out.print(" " + thirdNum1);
+            System.out.print(firstNum1 + " в первом разряде, ");
+        } if (secondNum1 == secondNum2) {
+                System.out.print(secondNum1 + " во втором разряде, ");
+        } if (thirdNum1 == thirdNum2) {
+            System.out.print(thirdNum1 + " в третьем разряде, ");
         }
-        if ( firstNum1 == firstNum2 && secondNum1 == secondNum2 && thirdNum1 == thirdNum2) {
-            System.out.print(" стоят в 1, 2, 3 разрядах");
-        } else if (secondNum1 == secondNum2 && thirdNum1 == thirdNum2) {
-            System.out.print(" стоят в 2, 3 разрядах");
-        } else if (thirdNum1 == thirdNum2) {
-            System.out.print(" стоят третьем разряде");
-        }
+
 
         System.out.println("\n\n5. Определение буквы, числа или символа по их коду\n");
 
@@ -123,28 +103,21 @@ public class IfElseStatementTheme {
         System.out.println("\n\n6. Определение суммы вклада и начисленных банком %\n");
 
         int depositSum = 300_000;
-        int depositRateLess100k = 5;
-        int depositRateLess300k = 7;
-        int depositRateMore300k = 10;
+        int depositInterest = 1;
         double percentage;
 
         System.out.println("Сумма вклада: " + depositSum);
-        if ( depositSum < 100_000) {
-            System.out.print("Начисленный процент: " + depositRateLess100k + "% годовых");
-            percentage = depositSum * depositRateLess100k / 100;
-            System.out.println(" (" + percentage + " руб.)");
-            System.out.println("Итоговая сумма с процентами составляет: " + (depositSum + percentage) + "руб.");
-        } else if ( depositSum >= 100_000 && depositSum < 300_000) {
-            System.out.print("Начисленный процент: " + depositRateLess300k + "% годовых");
-            percentage = depositSum * depositRateLess300k / 100;
-            System.out.println(" (" + percentage + " руб.)");
-            System.out.println("Итоговая сумма с процентами составляет: " + (depositSum + percentage) + "руб.");
-        } else if ( depositSum >= 300_000) {
-            System.out.print("Начисленный процент: " + depositRateMore300k + "% годовых");
-            percentage = depositSum * depositRateMore300k / 100;
-            System.out.println(" (" + percentage + " руб.)");
-            System.out.println("Итоговая сумма с процентами составляет: " + (depositSum + percentage) + "руб.");
+        if (depositSum < 100_000) {
+            depositInterest = 5;
+        } else if (depositSum >= 100_000 && depositSum < 300_000) {
+            depositInterest = 7;
+        } else if (depositSum >= 300_000) {
+            depositInterest = 10;
         }
+        System.out.print("Начисленый процент: " + depositInterest + "% годовых");
+        percentage = depositSum * depositInterest / 100;
+        System.out.println(" (" + percentage + " руб.)");
+        System.out.println("Итоговая сумма с процентами составляет: " + (depositSum + percentage) + "руб.");
 
         System.out.println("\n7. Определение оценки по предметам\n");
 
