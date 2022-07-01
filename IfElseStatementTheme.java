@@ -50,7 +50,8 @@ public class IfElseStatementTheme {
         System.out.print("Число: " + srcNum + " является");
         if (srcNum == 0) {
             System.out.print(" нулём");
-        } if (srcNum % 2 != 0) {
+        }
+        if (srcNum % 2 != 0) {
             System.out.print(" нечетным");
         } else if (srcNum % 2 == 0) {
             System.out.print(" четным");
@@ -75,9 +76,11 @@ public class IfElseStatementTheme {
         System.out.print("В числах " + firstNumber + " и " + secondNumber + " одинаковые цифры: ");
         if (firstNum1 == firstNum2) {
             System.out.print(firstNum1 + " в первом разряде, ");
-        } if (secondNum1 == secondNum2) {
+        }
+        if (secondNum1 == secondNum2) {
                 System.out.print(secondNum1 + " во втором разряде, ");
-        } if (thirdNum1 == thirdNum2) {
+        }
+        if (thirdNum1 == thirdNum2) {
             System.out.print(thirdNum1 + " в третьем разряде, ");
         }
 
