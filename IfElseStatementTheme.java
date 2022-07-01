@@ -1,31 +1,28 @@
-import java.sql.SQLOutput;
-
 public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("1. Перевод псевдокода на язык Java\n");
 
         int age = 19;
-        double height = 1.90;
-        String name = "Minnie";
-        String sex = "female";
-        char firstLetterOfName;
-
         if (age > 20) {
             System.out.println("Возраст: старше 20 лет");
         } else {
             System.out.println("Возраст: младше 20 лет");
         }
 
+        String sex = "female";
         if (sex != "male") {
             System.out.println("Пол: женский");
         }
 
+        double height = 1.90;
         if (height < 1.80) {
             System.out.println("Рост: ниже 180 см");
         } else {
             System.out.println("Рост: выше 180 см");
         }
 
+        String name = "Minnie";
+        char firstLetterOfName;
         firstLetterOfName = name.charAt(0);
         if (firstLetterOfName == 'M') {
             System.out.println("Первая буква имени М");
@@ -48,12 +45,12 @@ public class IfElseStatementTheme {
         
         System.out.println("\n3. Работа с числом\n");
 
-        int srcNum = 2;
+        int srcNum = 0;
 
         System.out.print("Число: " + srcNum + " является");
         if (srcNum == 0) {
             System.out.print(" нулём");
-        } else if (srcNum % 2 != 0) {
+        } if (srcNum % 2 != 0) {
             System.out.print(" нечетным");
         } else if (srcNum % 2 == 0) {
             System.out.print(" четным");
@@ -70,10 +67,10 @@ public class IfElseStatementTheme {
         int secondNumber = 521;
         int firstNum1 = firstNumber / 100;
         int secondNum1 = (firstNumber % 100) / 10;
-        int thirdNum1 = (firstNumber % 100) % 10;
+        int thirdNum1 = firstNumber % 10;
         int firstNum2 = secondNumber / 100;
         int secondNum2 = (secondNumber % 100) / 10;
-        int thirdNum2 = (secondNumber % 100) % 10;
+        int thirdNum2 = secondNumber % 10;
 
         System.out.print("В числах " + firstNumber + " и " + secondNumber + " одинаковые цифры: ");
         if (firstNum1 == firstNum2) {
@@ -84,17 +81,16 @@ public class IfElseStatementTheme {
             System.out.print(thirdNum1 + " в третьем разряде, ");
         }
 
-
         System.out.println("\n\n5. Определение буквы, числа или символа по их коду\n");
 
-        char srcChar = '\u0057';
+        char unknownChar = '\u0057';
 
-        System.out.print(srcChar);
-        if (srcChar >= 'A' && srcChar <= 'Z') {
+        System.out.print(unknownChar);
+        if (unknownChar >= 'A' && unknownChar <= 'Z') {
             System.out.print(" это большая буква");
-        } else if (srcChar >= 'a' && srcChar <= 'z') {
+        } else if (unknownChar >= 'a' && unknownChar <= 'z') {
             System.out.print(" это маленькая буква");
-        } else if (srcChar >= 0 && srcChar <= 9) {
+        } else if (unknownChar >= 0 && unknownChar <= 9) {
             System.out.print(" это число");
         } else {
             System.out.print(" это символ");
