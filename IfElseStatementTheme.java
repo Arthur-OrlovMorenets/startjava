@@ -50,16 +50,17 @@ public class IfElseStatementTheme {
         System.out.print("Число: " + srcNum + " является");
         if (srcNum == 0) {
             System.out.print(" нулём");
+        } else {
+            if (srcNum % 2 != 0) {
+                System.out.print(" нечетным");
+            } else if (srcNum % 2 == 0) {
+                System.out.print(" четным");
+            }
+            if (srcNum > 0) {
+                System.out.print(" положительным");
+            } else if (srcNum < 0) {
+                System.out.print(" отрицательным");
         }
-        if (srcNum % 2 != 0) {
-            System.out.print(" нечетным");
-        } else if (srcNum % 2 == 0) {
-            System.out.print(" четным");
-        }
-        if (srcNum > 0) {
-            System.out.print(" положительным");
-        } else if (srcNum < 0) {
-            System.out.print(" отрицательным");
         }
 
         System.out.println("\n\n4. Поиск одинаковых цифр в числах\n");
@@ -78,7 +79,7 @@ public class IfElseStatementTheme {
             System.out.print(firstNum1 + " в первом разряде, ");
         }
         if (secondNum1 == secondNum2) {
-                System.out.print(secondNum1 + " во втором разряде, ");
+            System.out.print(secondNum1 + " во втором разряде, ");
         }
         if (thirdNum1 == thirdNum2) {
             System.out.print(thirdNum1 + " в третьем разряде, ");
@@ -93,7 +94,7 @@ public class IfElseStatementTheme {
             System.out.print(" это большая буква");
         } else if (unknownChar >= 'a' && unknownChar <= 'z') {
             System.out.print(" это маленькая буква");
-        } else if (unknownChar >= 0 && unknownChar <= 9) {
+        } else if (unknownChar >= '0' && unknownChar <= '9') {
             System.out.print(" это число");
         } else {
             System.out.print(" это символ");
