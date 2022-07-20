@@ -52,8 +52,10 @@ public class CyclesTheme {
     System.out.println("\n" + sum);
 
     System.out.println("\n4. Вывод чисел на консоль в несколько строк");
+    int counter = 0;
     for (int k = 1; k < 24; k += 2) {
         System.out.printf("%5d", k);
+        counter += 1;
         if (k >= 9 && k < 11) {
             System.out.println("\n");
         }
@@ -61,16 +63,15 @@ public class CyclesTheme {
             System.out.println("\n");
         }
         if (k >=23) {
-            System.out.printf("%5d", 0);
-            System.out.printf("%5d", 0);
-            System.out.printf("%5d", 0);
+            for (counter = counter; counter < 15; counter += 1) {
+            System.out.printf("%5d", 0);    
+            }
         }
     }
-    
+
     System.out.println("\n5. Проверка количества единиц на четность");
     number = 3141591;
     int sumOfNumbers = 0;
-    
     System.out.print("число " + number+ " содержит ");
     while (number > 0) {
         lastNumber = number % 10;
@@ -84,8 +85,18 @@ public class CyclesTheme {
     } else if (sumOfNumbers % 2 != 0) {
         System.out.print("нечетное количество единиц");
     }
-    
+
     System.out.println("\n6. Отображение фигур в консоли");
-     
+    for (int l = 1; l < 6; l++) {
+        System.out.println("**********");
+    }
+    int l = 0;
+    int k =5;
+    while (l < k) {
+        System.out.print("#");
+        l += 1;
+        }
+
+
     }
 }
