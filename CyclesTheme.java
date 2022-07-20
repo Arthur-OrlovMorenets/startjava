@@ -72,7 +72,7 @@ public class CyclesTheme {
     System.out.println("\n5. Проверка количества единиц на четность");
     number = 3141591;
     int sumOfNumbers = 0;
-    System.out.print("число " + number+ " содержит ");
+    System.out.print("число " + number);
     while (number > 0) {
         lastNumber = number % 10;
         if (lastNumber == 1) {
@@ -80,10 +80,12 @@ public class CyclesTheme {
         }
         number = number / 10;
     }
-    if (sumOfNumbers % 2 == 0) {
-        System.out.print("четное количество единиц");
+    if (number == '0') {
+        System.out.println(" не содержит едениц");
+    } else if (sumOfNumbers % 2 == 0) {
+        System.out.print(" содержит четное количество единиц");
     } else if (sumOfNumbers % 2 != 0) {
-        System.out.print("нечетное количество единиц");
+        System.out.print(" содержит нечетное количество единиц");
     }
 
     System.out.println("\n6. Отображение фигур в консоли");
