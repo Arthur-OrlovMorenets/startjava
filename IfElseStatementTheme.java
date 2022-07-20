@@ -60,7 +60,7 @@ public class IfElseStatementTheme {
                 System.out.print(" положительным");
             } else if (srcNum < 0) {
                 System.out.print(" отрицательным");
-        }
+            }
         }
 
         System.out.println("\n\n4. Поиск одинаковых цифр в числах\n");
