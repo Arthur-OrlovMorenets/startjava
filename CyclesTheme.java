@@ -90,13 +90,17 @@ public class CyclesTheme {
     for (int l = 1; l < 6; l++) {
         System.out.println("**********");
     }
-    int l = 0;
-    int k =5;
-    while (l < k) {
-        System.out.print("#");
-        l += 1;
+    int l = 5;
+    int k = 5;
+    while (l > 0) {
+        while ( k > 0) {
+            System.out.print("#");
+            k -= 1;
         }
-
-
+        System.out.println("");
+        l -= 1;
+        k = l;
+        }
     }
 }
+
