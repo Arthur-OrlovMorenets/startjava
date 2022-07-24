@@ -92,17 +92,46 @@ public class CyclesTheme {
     for (int l = 1; l < 6; l++) {
         System.out.println("**********");
     }
-    int l = 5;
-    int k = 5;
-    while (l > 0) {
-        while ( k > 0) {
+
+    System.out.println("");
+
+    int cycle = 5;
+    int symbol = 5;
+    while (cycle > 0) {
+        while ( symbol > 0) {
             System.out.print("#");
-            k -= 1;
+            symbol--;
         }
         System.out.println("");
-        l -= 1;
-        k = l;
+        cycle--;
+        symbol = cycle;
         }
+    
+
+    System.out.println("");
+
+    cycle = 0;
+    symbol = 5;
+
+    do {
+        if (symbol < 3) {
+            cycle = symbol;
+        } else {
+            cycle = 6 - symbol;
+        }
+        do {
+            System.out.print("$");
+        } while ( --cycle > 0);
+        System.out.println("");
+        symbol--;
+        } while ( symbol > 0);
+
+        System.out.println("7. Отображение ASCII-символов");
+
+
+
+
+
+
     }
 }
-
