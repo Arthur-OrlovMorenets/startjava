@@ -141,9 +141,8 @@ public class CyclesTheme {
 
         int num = 1234321;
         int reversed = 0;
-        number = num;
 
-        for (;number != 0; number /= 10) {
+        for (number = num; number != 0; number /= 10) {
             int digit = number % 10;
             reversed = reversed * 10 + digit;
         }
