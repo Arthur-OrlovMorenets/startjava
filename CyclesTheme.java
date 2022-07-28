@@ -154,7 +154,20 @@ public class CyclesTheme {
 
         System.out.println("9. Определение, является ли число счастливым");
 
+        num = 123321;
+        int firstSum = 0;
+        int secondSum = 0;
+        counter = 0;
 
+        for (number = num; number != 0; number /= 10) {
+            int digit = number % 10;
+            counter++;
+
+//если сумма последние трёх равно половине сыммы всех, то число - счастливое
+
+        }
+
+        System.out.println(firstSum + " " + secondSum);
 
     }
 }
