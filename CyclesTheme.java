@@ -107,7 +107,6 @@ public class CyclesTheme {
             symbol = cycle;
         }
 
-
         System.out.println("");
 
         cycle = 0;
@@ -159,15 +158,49 @@ public class CyclesTheme {
         int secondSum = 0;
         counter = 0;
 
+        System.out.print("Сумма цифр ");
         for (number = num; number != 0; number /= 10) {
             int digit = number % 10;
             counter++;
-
-//если сумма последние трёх равно половине сыммы всех, то число - счастливое
-
+        if ( counter < 4) {
+            firstSum = firstSum + digit;
+            System.out.print(digit);
+            if (counter == 3) {
+                System.out.print(" = " + firstSum + ";\n");
+                System.out.print("Сумма цифр ");
+            }
+        }
+        if (counter > 3 && counter < 7) {
+            secondSum = secondSum + digit;
+            System.out.print(digit);
+            if (counter == 6) {
+                System.out.print(" = " + secondSum + ";\n");
+            }
+        }
+        }
+        if ( firstSum == secondSum) {
+            System.out.println("Число " + num + " является счастливым");
+        } else {
+            System.out.println("Число " + num + " не является счастливым");
         }
 
-        System.out.println(firstSum + " " + secondSum);
+        System.out.println("10. Вывод таблицы умножения Пифагора");
 
+        int result = 0;
+        System.out.printf("%11s%12s%n", "ТАБЛИЦА", "ПИФАГОРА");
+        System.out.printf("%4s%3s%3s%3s%3s%3s%3s%3s%3s%n", "|", "2", "3", "4", "5", "6", "7", "8", "9");
+        System.out.printf("%28s%n", "___|________________________");
+        for (int a = 2; a < 10; a++) {
+            for (int b = 1; b < 10; b++) {
+                result = a * b;
+                System.out.printf("%3d", result);
+                if ( b == 1) {
+                    System.out.print("|");
+                }
+                if ( b == 9) {
+                    System.out.println("");
+                }
+            }
+        }
     }
 }
