@@ -89,35 +89,35 @@ public class CyclesTheme {
 
         System.out.println("");
 
-        int cycle = 5;
-        int symbol = 5;
-        while (cycle > 0) {
-            while (symbol > 0) {
+        int iteration = 5;
+        int symbolsAmount = 5;
+        while (iteration > 0) {
+            while (symbolsAmount > 0) {
                 System.out.print("#");
-                symbol--;
+                symbolsAmount--;
             }
             System.out.println("");
-            cycle--;
-            symbol = cycle;
+            iteration--;
+            symbolsAmount = iteration;
         }
 
         System.out.println("");
 
-        cycle = 0;
-        symbol = 5;
+        iteration = 0;
+        symbolsAmount = 5;
 
         do {
-            if (symbol < 3) {
-                cycle = symbol;
+            if (symbolsAmount < 3) {
+                iteration = symbolsAmount;
             } else {
-                cycle = 6 - symbol;
+                iteration = 6 - symbolsAmount;
             }
             do {
                 System.out.print("$");
-            } while (--cycle > 0);
+            } while (--iteration > 0);
             System.out.println("");
-            symbol--;
-        } while (symbol > 0);
+            symbolsAmount--;
+        } while (symbolsAmount > 0);
 
         System.out.println("\n7. Отображение ASCII-символов");
 
