@@ -163,7 +163,7 @@ public class CyclesTheme {
         for (number = srcNumber; number != 0; number /= 10) {
             int digit = number % 10;
             counter++;
-            if (counter < (counterAmount/2)+1) {
+            if (counter < (counterAmount / 2) + 1) {
                 firstSum += digit;
                 System.out.print(digit);
                 if (counter == counterAmount / 2) {
@@ -171,7 +171,7 @@ public class CyclesTheme {
                     System.out.print("Сумма цифр ");
                 }
             }
-            if (counter > 3 && counter < counterAmount + 1) {
+            if (counter > counterAmount / 2 && counter < counterAmount + 1) {
                 secondSum = secondSum + digit;
                 System.out.print(digit);
                 if (counter == counterAmount) {
