@@ -3,15 +3,15 @@ public class CyclesTheme {
         System.out.println("1. Подсчет суммы четных и нечетных чисел");
         int sumEven = 0;
         int sumOdd = 0;
-        int limitValue = -10;
+        int counter = -10;
         do {
-            if (limitValue % 2 == 0) {
-                sumEven += limitValue;
+            if (counter % 2 == 0) {
+                sumEven += counter;
             } else {
-                sumOdd += limitValue;
+                sumOdd += counter;
             }
-            limitValue++;
-        } while (limitValue <= 21);
+            counter++;
+        } while (counter <= 21);
         System.out.println("в промежутке [-10, 21] сумма четных чисел = " + sumEven + ", а нечетных = " + sumOdd);
 
         System.out.println("\n2. Вывод чисел в интервале (min и max)");
@@ -52,7 +52,7 @@ public class CyclesTheme {
         System.out.println("\n" + sumDigits);
 
         System.out.println("\n4. Вывод чисел на консоль в несколько строк");
-        int counter = 0;
+        counter = 0;
         for (int i = 1; i < 24; i += 2) {
             System.out.printf("%5d", i);
             counter++;
