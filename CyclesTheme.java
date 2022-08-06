@@ -40,7 +40,7 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
-        
+
         int srcNumber = 1234;
         int sumDigits = 0;
         while (srcNumber > 0) {
@@ -152,29 +152,34 @@ public class CyclesTheme {
         int firstSum = 0;
         int secondSum = 0;
         counter = 0;
-        int counterAmount = 0;
-        
-        //счетчик для подсчета количества цифр в числе
-        for (number = srcNumber; number != 0; number /= 10) {
+        int countDigits = 0;
+
+        //счетчик для подсчета количества цифр в числе\
+        number = srcNumber;
+        while (number != 0) {
             int digit = number % 10;
-            counterAmount++;
+            countDigits++;
+            number /= 10;
         }
+
+        number = srcNumber;
         System.out.print("Сумма цифр ");
-        for (number = srcNumber; number != 0; number /= 10) {
+        while (number != 0) {
             int digit = number % 10;
             counter++;
-            if (counter < (counterAmount / 2) + 1) {
+            number /= 10;
+            if (counter < (countDigits / 2) + 1) {
                 firstSum += digit;
                 System.out.print(digit);
-                if (counter == counterAmount / 2) {
+                if (counter == countDigits / 2) {
                     System.out.print(" = " + firstSum + ";\n");
                     System.out.print("Сумма цифр ");
                 }
             }
-            if (counter > counterAmount / 2 && counter < counterAmount + 1) {
-                secondSum = secondSum + digit;
+            if (counter > countDigits / 2 && counter < countDigits + 1) {
+                secondSum += digit;
                 System.out.print(digit);
-                if (counter == counterAmount) {
+                if (counter == countDigits) {
                     System.out.print(" = " + secondSum + ";\n");
                 }
             }
